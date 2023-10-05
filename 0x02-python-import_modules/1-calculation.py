@@ -26,4 +26,3 @@ if __name__ == "__main__":
     c = div(a, b)
 
     print('{:d} / {:d} = {:d}'.format(a, b, c))
-
