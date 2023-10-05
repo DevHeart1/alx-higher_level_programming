@@ -2,31 +2,31 @@
 
 if __name__ == "__main__":
 
-import calculator_1 as cal
+from calculator_1 import add, sub, mul, div
 
 a = 10
 b = 5
-c = cal.add(a, b)
+c = add(a, b)
  
 print('{:d} + {:d} = {:d}'.format(a, b, c))
 
 
 a = 10
 b = 5
-c = cal.sub(a, b)
+c = sub(a, b)
 
 print('{:d} - {:d} = {:d}'.format(a, b, c))
 
 
 a = 10
 b = 5
-c = cal.mul(a, b)
+c = mul(a, b)
 
 print('{:d} * {:d} = {:d}'.format(a, b, c))
 
 
 a = 10
 b = 5
-c = cal.div(a, b)
+c = div(a, b)
 
 print('{:d} / {:d} = {:d}'.format(a, b, c))
