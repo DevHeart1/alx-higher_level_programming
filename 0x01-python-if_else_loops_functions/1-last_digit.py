@@ -7,4 +7,3 @@ number_string = str(number)
 
 # Then extract the last digit
 last_digit = number_string[-1]
-
