@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-import pic
+import py_is_cool
