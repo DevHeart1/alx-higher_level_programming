@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This Module contains a script that lists all states from a database"""
+"""Module with a script that displays values dependant on the argumnet """
 import MySQLdb
 from sys import argv
 
@@ -7,11 +7,13 @@ from sys import argv
 if __name__ == "__main__":
     db = MySQLdb.connect(
             host="localhost", port=3306,
-            user=argv[1], password=argv[2], db=argv[3])
+            user=argv[1], passwd=argv[2], db=argv[3])
 
     cur = db.cursor()
-
-    cur.execute("SELECT * FROM states")
+    cur.execute("\
+            SELECT * FROM states\
+            WHERE BINARY name = '{}';\
+            ".format(argv[4]))
 
     rows = cur.fetchall()
     for row in rows:
